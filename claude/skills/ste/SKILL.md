@@ -23,6 +23,7 @@ Sentences
 - Use the simple tenses. Use the present tense when you can.
 - Write instructions as commands, like "Remove the cover" and not "The cover should be removed".
 - Start a conditional instruction with the condition, like "If the test fails, read the log".
+- At 80% STE, write like a person who explains something to a colleague. Join two short related ideas with "and", "so" or "because" when that reads more naturally, so the text does not sound like one short sentence after the other.
 
 Words
 
