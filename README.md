@@ -1,6 +1,6 @@
 # claude-config
 
-My Claude Code setup in one repo: global instructions, settings, status line, memory, and a stack of about twenty skill packs with a guide to which one to use when.
+My Claude Code setup in one repo, with global instructions, settings, status line, memory, and a stack of about twenty skill packs with a guide to which one to use when.
 
 ## Install
 
@@ -23,7 +23,8 @@ Restart Claude Code afterwards. Anything `setup.sh` replaces in `~/.claude` is b
 | `claude/settings.json` | `~/.claude/settings.json` | Opus on high effort, fullscreen TUI, dark theme, voice input, status line, and every plugin from the stack turned on |
 | `claude/statusline-command.sh` | `~/.claude/statusline-command.sh` | Orange status bar showing user@macbook, folder, git branch, model, context used and the time |
 | `claude/skills/no-ai-slop` | `~/.claude/skills/` | Writing skill that edits drafts to sound human without losing your voice |
-| `memory/` | `~/.claude/projects/<home>/memory/` | Standing preferences Claude remembers across sessions started in `~`: writing style and how to match themes |
+| `claude/skills/ste` | `~/.claude/skills/` | Writing skill that explains or rewrites in ASD-STE100 Simplified Technical English, 80% strict by default |
+| `memory/` | `~/.claude/projects/<home>/memory/` | Standing preferences Claude remembers across sessions started in `~`, covering writing style and how to match themes |
 | `install-stack.sh` | | Installs the skill packs, MCP servers and CLIs |
 | `SKILLS.md` | | Which skill to use for which job, where packs overlap, and what to know before installing |
 

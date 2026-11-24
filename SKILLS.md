@@ -66,6 +66,7 @@ Name the skill you want. Claude picks skills by their descriptions, and with thi
 |---|---|---|
 | Make a draft sound like you, not a chatbot | `no-ai-slop` | "edit this, keep my voice" |
 | Check a draft for AI tells without rewriting | `no-ai-slop` | "does this read as AI?" |
+| Explain something in plain, literal, hard-to-misread English | `ste` | "explain this in STE", "strict STE" |
 | A second pass against Wikipedia's AI-writing list | `humanizer` | "/humanizer" |
 | Make a video, promo, explainer or captioned clip | `hyperframes` | "make a 30s launch video for X" |
 | A slide deck you can click through | `slideshow` (from hyperframes) | "turn this into a slideshow" |
@@ -99,7 +100,7 @@ If skill picks start going wrong, disable a pack with `claude plugin disable <na
 - `graphify install` adds a short `# graphify` section to `~/.claude/CLAUDE.md`.
 - archify makes diagram pages unasked for complex answers. Add `[archify explainer: on-demand]` to `~/.claude/CLAUDE.md` to get pages only when you ask.
 - impeccable runs a design check after every file edit and at session start. It's fast, but it's there.
-- no-ai-slop has no upstream repo. It lives in this repo and `setup.sh` installs it, so `install-stack.sh` alone skips it.
+- no-ai-slop and ste have no upstream repo. They live in this repo and `setup.sh` installs them, so `install-stack.sh` alone skips them.
 - i-have-adhd is on for every session while `~/.claude/.i-have-adhd-always` exists. Delete that file to turn it off.
 - BMAD v7 is an alpha and changes often. `bmad status` shows what you have and `bmad setup` updates it.
 
@@ -107,7 +108,7 @@ If skill picks start going wrong, disable a pack with `claude plugin disable <na
 
 ```bash
 claude plugin uninstall <plugin>@<marketplace>    # plugins
-rm -rf ~/.claude/skills/<skill-name>              # archify, bmad-*, graphify, no-ai-slop, hyperframes, caveman
+rm -rf ~/.claude/skills/<skill-name>              # archify, bmad-*, graphify, no-ai-slop, ste, hyperframes, caveman
 uv tool uninstall graphifyy agent-reach headroom-ai
 claude mcp remove playwright --scope user
 ```

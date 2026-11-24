@@ -23,6 +23,7 @@ put claude/CLAUDE.md               "$C/CLAUDE.md"
 put claude/settings.json           "$C/settings.json"
 put claude/statusline-command.sh   "$C/statusline-command.sh"
 put claude/skills/no-ai-slop       "$C/skills/no-ai-slop"
+put claude/skills/ste              "$C/skills/ste"
 for f in memory/*.md; do put "$f" "$MEM/$(basename "$f")"; done
 touch "$C/.i-have-adhd-always" # action-first replies in every session; delete to turn off
 
