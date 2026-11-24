@@ -4,13 +4,7 @@ I installed about twenty skill packs and ended up with five code reviewers, four
 
 ## Install
 
-You need [Claude Code](https://claude.com/claude-code), Node 18+, git and [uv](https://docs.astral.sh/uv/).
-
-```bash
-bash install-stack.sh   # or bash setup.sh for the stack plus my config
-```
-
-Read `install-stack.sh` first and delete the lines you don't want. Then restart Claude Code. Everything installs at user scope, so it works in every project.
+See the [README](README.md). To install only the skills, without my config, run `bash install-stack.sh`. Read it first and delete the lines you don't want. Everything installs at user scope, so it works in every project.
 
 ## The one rule
 
@@ -81,7 +75,7 @@ Read `install-stack.sh` first and delete the lines you don't want. Then restart 
 | What | What it does |
 |---|---|
 | `claude-mem` | Records your sessions locally and feeds the useful parts into the next one. Nothing to call. |
-| `i-have-adhd` | Replies lead with the next action and number the steps. Call it, or turn it on everywhere (see below). |
+| `i-have-adhd` | Replies lead with the next action and number the steps. `setup.sh` turns it on for every session. |
 | `headroom` | Compresses context to save tokens through a local proxy. Off until you run `headroom init`. |
 
 ## Where the packs overlap
@@ -107,8 +101,8 @@ If skill picks start going wrong, disable a pack with `claude plugin disable <na
 - **graphify install** adds a short `# graphify` section to `~/.claude/CLAUDE.md`.
 - **archify** makes diagram pages unasked for complex answers. Add `[archify explainer: on-demand]` to `~/.claude/CLAUDE.md` to get pages only when you ask.
 - **impeccable** runs a design check after every file edit and at session start. It's fast, but it's there.
-- **no-ai-slop** has no upstream repo, so the script writes it to `~/.claude/skills/no-ai-slop`.
-- **i-have-adhd** turns on for every session with `touch ~/.claude/.i-have-adhd-always`. Delete that file to turn it off.
+- **no-ai-slop** has no upstream repo. It lives in this repo and `setup.sh` installs it, so `install-stack.sh` alone skips it.
+- **i-have-adhd** is on for every session while `~/.claude/.i-have-adhd-always` exists. Delete that file to turn it off.
 - **BMAD** v7 is an alpha and changes often. `bmad status` shows what you have and `bmad setup` updates it.
 
 ## Remove something

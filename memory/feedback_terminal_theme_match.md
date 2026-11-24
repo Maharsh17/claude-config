@@ -1,7 +1,7 @@
 ---
 name: feedback-terminal-theme-match
 description: "When user asks to \"match\" themes, they mean recolor the terminal to fit existing assets - don't restyle the existing assets."
-metadata: 
+metadata:
   node_type: memory
   type: feedback
 ---

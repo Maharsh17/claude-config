@@ -1,12 +1,12 @@
 ---
 name: feedback-communication-style
 description: "The user wants no em-dashes and a natural, human voice in writing (chat responses and any copy/prose I produce)"
-metadata: 
+metadata:
   node_type: memory
   type: feedback
 ---
 
-Don't use em-dashes (-). Write in a natural, human voice instead of terse dash-heavy technical shorthand.
+Don't use em dashes. Write in a natural, human voice instead of terse dash-heavy technical shorthand.
 
 **Why:** The user asked directly for this ("no emdash and human voice") after a stretch of responses that leaned on em-dashes for compression. They want writing that reads like a person wrote it, not clipped technical notes.
 

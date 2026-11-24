@@ -13,7 +13,7 @@ bash setup.sh            # skill stack + config
 bash setup.sh --config   # config only, skip the skill stack
 ```
 
-Restart Claude Code afterwards. Anything `setup.sh` replaces in `~/.claude` is backed up to `~/.claude/backup-<timestamp>/` first, and running it again changes nothing.
+Restart Claude Code afterwards. Anything `setup.sh` replaces in `~/.claude` is backed up to `~/.claude/backup-<timestamp>/` first. It's safe to run again.
 
 ## What's in here
 
