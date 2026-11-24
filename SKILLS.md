@@ -74,7 +74,6 @@ See the [README](README.md). To install only the skills, without my config, run 
 
 | What | What it does |
 |---|---|
-| `claude-mem` | Records your sessions locally and feeds the useful parts into the next one. Nothing to call. |
 | `i-have-adhd` | Replies lead with the next action and number the steps. `setup.sh` turns it on for every session. |
 | `headroom` | Compresses context to save tokens through a local proxy. Off until you run `headroom init`. |
 
@@ -95,7 +94,6 @@ If skill picks start going wrong, disable a pack with `claude plugin disable <na
 
 ## Read before you install
 
-- **claude-mem** hooks into every prompt and tool call and runs a local background worker. Your memory stays in `~/.claude-mem`. The script turns its anonymous analytics off.
 - **headroom**'s hook only does something after `headroom init`. Once you run that, all Claude Code API traffic goes through its local proxy.
 - **Agent Reach** borrows a site's login from your Chrome when a site needs one. Its own docs suggest using a secondary account for those.
 - **graphify install** adds a short `# graphify` section to `~/.claude/CLAUDE.md`.
@@ -135,5 +133,4 @@ claude mcp remove playwright --scope user
 [Playwright MCP](https://github.com/microsoft/playwright-mcp) ·
 [Agent Reach](https://github.com/Panniantong/Agent-Reach) ·
 [i-have-adhd](https://github.com/ayghri/i-have-adhd) ·
-[claude-mem](https://github.com/thedotmack/claude-mem) ·
 [headroom](https://github.com/headroomlabs-ai/headroom)

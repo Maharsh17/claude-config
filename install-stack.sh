@@ -53,8 +53,6 @@ uv tool install https://github.com/Panniantong/Agent-Reach/releases/latest/downl
 
 echo "== Session quality of life"
 plugin ayghri/i-have-adhd     i-have-adhd@i-have-adhd
-plugin thedotmack/claude-mem  claude-mem@thedotmack
-npx -y claude-mem telemetry disable || true
 # Headroom: plugin + CLI only. Its hook does nothing until you run `headroom init`,
 # which routes all Claude Code API traffic through a local proxy.
 plugin headroomlabs-ai/headroom headroom@headroom-marketplace
