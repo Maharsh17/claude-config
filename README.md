@@ -29,8 +29,8 @@ Restart Claude Code afterwards. Anything `setup.sh` replaces in `~/.claude` is b
 
 ## Before you copy this
 
-- **Permissions are wide open.** `settings.json` allows Bash, Edit, Write and web access without asking. That suits how I work. If you want prompts, trim `permissions.allow`.
-- **`setup.sh` overwrites your `CLAUDE.md` and `settings.json`.** They're backed up, but merge your own settings back in if you had any.
-- **The memory is mine.** It's about my writing style and how I like themes matched. Delete the files in `memory/` that don't fit you.
-- **Read `SKILLS.md`** for what the stack runs in the background: impeccable checks UI edits, and Headroom stays off until you run `headroom init`.
-- **ADHD mode is on.** `setup.sh` turns on i-have-adhd for every session, so replies lead with the next action. Delete `~/.claude/.i-have-adhd-always` to turn it off.
+- `settings.json` lets Claude run Bash, edit files and use the web without asking, so trim `permissions.allow` if you want prompts.
+- `setup.sh` overwrites your `CLAUDE.md` and `settings.json` after backing them up, so merge your own settings back in if you had any.
+- The files in `memory/` describe my writing style and how I like themes matched, so delete the ones that don't fit you.
+- impeccable runs a design check after UI edits, and Headroom does nothing until you run `headroom init`. `SKILLS.md` covers the rest.
+- `setup.sh` turns on i-have-adhd for every session, and deleting `~/.claude/.i-have-adhd-always` turns it off.

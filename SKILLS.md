@@ -8,7 +8,7 @@ See the [README](README.md). To install only the skills, without my config, run 
 
 ## The one rule
 
-**Name the skill you want.** Claude picks skills by their descriptions, and with this many overlaps it will sometimes grab a different pack's version. "Use superpowers brainstorming on this" gets you that exact skill. A bare "help me plan this" gets you whichever one Claude likes today.
+Name the skill you want. Claude picks skills by their descriptions, and with this many overlaps it will sometimes grab a different pack's version. "Use superpowers brainstorming on this" gets you that exact skill. A bare "help me plan this" gets you whichever one Claude likes today.
 
 ## What to use when
 
@@ -81,27 +81,27 @@ See the [README](README.md). To install only the skills, without my config, run 
 
 These all do the same jobs. The table above picks one, but here's the full list if you'd rather use another.
 
-- **Code review**: built-in `/code-review`, `superpowers:requesting-code-review`, `mattpocock-skills:code-review`, `agent-skills:code-review-and-quality`, `bmad-code-review`
-- **TDD**: superpowers, `mattpocock-skills:tdd`, `agent-skills:test-driven-development`
-- **Debugging**: superpowers, `mattpocock-skills:diagnosing-bugs`, `agent-skills:debugging-and-error-recovery`
-- **Codebase maps**: understand-anything and graphify
-- **UI design**: impeccable, taste-skill, ui-ux-pro-max
-- **Writing cleanup**: no-ai-slop and humanizer
-- **Terse output**: caveman, ponytail and i-have-adhd all push Claude to say less
-- **Planning**: superpowers, Addy's `planning-and-task-breakdown`, BMAD
+- Code review comes from built-in `/code-review`, `superpowers:requesting-code-review`, `mattpocock-skills:code-review`, `agent-skills:code-review-and-quality`, `bmad-code-review`
+- TDD comes from superpowers, `mattpocock-skills:tdd`, `agent-skills:test-driven-development`
+- Debugging comes from superpowers, `mattpocock-skills:diagnosing-bugs`, `agent-skills:debugging-and-error-recovery`
+- Codebase maps come from understand-anything and graphify
+- UI design comes from impeccable, taste-skill and ui-ux-pro-max
+- Writing cleanup comes from no-ai-slop and humanizer
+- Caveman, ponytail and i-have-adhd all push Claude to say less
+- Planning comes from superpowers, Addy's `planning-and-task-breakdown` and BMAD
 
 If skill picks start going wrong, disable a pack with `claude plugin disable <name>`.
 
 ## Read before you install
 
-- **headroom**'s hook only does something after `headroom init`. Once you run that, all Claude Code API traffic goes through its local proxy.
-- **Agent Reach** borrows a site's login from your Chrome when a site needs one. Its own docs suggest using a secondary account for those.
-- **graphify install** adds a short `# graphify` section to `~/.claude/CLAUDE.md`.
-- **archify** makes diagram pages unasked for complex answers. Add `[archify explainer: on-demand]` to `~/.claude/CLAUDE.md` to get pages only when you ask.
-- **impeccable** runs a design check after every file edit and at session start. It's fast, but it's there.
-- **no-ai-slop** has no upstream repo. It lives in this repo and `setup.sh` installs it, so `install-stack.sh` alone skips it.
-- **i-have-adhd** is on for every session while `~/.claude/.i-have-adhd-always` exists. Delete that file to turn it off.
-- **BMAD** v7 is an alpha and changes often. `bmad status` shows what you have and `bmad setup` updates it.
+- Headroom's hook only does something after `headroom init`. Once you run that, all Claude Code API traffic goes through its local proxy.
+- Agent Reach borrows a site's login from your Chrome when a site needs one. Its own docs suggest using a secondary account for those.
+- `graphify install` adds a short `# graphify` section to `~/.claude/CLAUDE.md`.
+- archify makes diagram pages unasked for complex answers. Add `[archify explainer: on-demand]` to `~/.claude/CLAUDE.md` to get pages only when you ask.
+- impeccable runs a design check after every file edit and at session start. It's fast, but it's there.
+- no-ai-slop has no upstream repo. It lives in this repo and `setup.sh` installs it, so `install-stack.sh` alone skips it.
+- i-have-adhd is on for every session while `~/.claude/.i-have-adhd-always` exists. Delete that file to turn it off.
+- BMAD v7 is an alpha and changes often. `bmad status` shows what you have and `bmad setup` updates it.
 
 ## Remove something
 

@@ -1,8 +1,11 @@
 # global agent instructions
 
 - Never use the em dash "—". Use plain dash "-" instead
-- Never use colons or semicolons in chat replies and prose. Use plain sentences instead
-  (colons are still fine in code, file contents, markdown lists, labels, and URLs)
+- Never use semicolons in prose. Keep colons rare too, in chat, docs, READMEs and lists alike.
+  Write a plain sentence instead. Colons are fine only where syntax needs them (code, config, URLs, times)
+- No slop bullets. Don't write a bullet that opens with a label or punchy statement and then expands on it,
+  like "**Fast:** it runs quicker because..." or "Simple and clean. It uses...". Write each bullet as one
+  plain sentence that just says the thing, or use a short paragraph instead of a list
 - Write like a human. Follow the no-ai-slop skill when writing prose. No throat-clearing,
   no colon reveals, no AI vocabulary, no fake-drama rhythm. Say the thing plainly
 - When writing commit messages, NEVER auto-add your agent name as co-author
