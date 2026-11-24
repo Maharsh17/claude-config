@@ -1,14 +1,14 @@
-# My Claude Code skill stack, and which skill to use when
+# Which skill to use when
 
-I installed about twenty skill packs and ended up with five code reviewers, four TDD skills and three planners, with Claude choosing between them on its own. This is the condensed version. One script installs the whole stack, and the table below gives one pick per job so you know what to ask for.
+I installed about twenty skill packs and ended up with five code reviewers, four TDD skills and three planners, and Claude was picking between them on its own. This guide picks one skill for each job, so you know what to ask for. One script installs all of them.
 
 ## Install
 
-See the [README](README.md). To install only the skills, without my config, run `bash install-stack.sh`. Read it first and delete the lines you don't want. Everything installs at user scope, so it works in every project.
+The [README](README.md) has the full install. If you only want the skills and not my config, run `bash install-stack.sh`. Read it first and delete the lines you don't want. Everything installs at user scope, so it works in every project.
 
-## The one rule
+## Name the skill you want
 
-Name the skill you want. Claude picks skills by their descriptions, and with this many overlaps it will sometimes grab a different pack's version. "Use superpowers brainstorming on this" gets you that exact skill. A bare "help me plan this" gets you whichever one Claude likes today.
+Claude picks a skill by reading its description, and with this many overlaps it will sometimes pick a different pack's version of the one you meant. If you say "use superpowers brainstorming on this", you get exactly that skill. If you say "help me plan this", you get whichever one Claude likes today.
 
 ## What to use when
 
@@ -17,37 +17,37 @@ Name the skill you want. Claude picks skills by their descriptions, and with thi
 | You want to | Use | Say something like |
 |---|---|---|
 | Turn a fuzzy idea into a design | `superpowers:brainstorming` | "brainstorm this feature with me" |
-| Have your plan attacked | `mattpocock-skills:grilling` | "grill me on this plan" |
+| Have someone poke holes in your plan | `mattpocock-skills:grilling` | "grill me on this plan" |
 | Write a spec or PRD | `agent-skills:spec-driven-development` | "write a spec for X" |
 | Break a spec into steps | `superpowers:writing-plans` | "write an implementation plan" |
 | Carry out the plan | `superpowers:subagent-driven-development` | "execute the plan" |
-| Write tests first | `superpowers:test-driven-development` | "do this TDD" |
-| Throw together a prototype | `mattpocock-skills:prototype` | "prototype this so I can feel it out" |
-| Run a full product team (PM, architect, dev, QA) | BMAD, start with `bmad` | "bmad, where do I start?" |
+| Write the tests first | `superpowers:test-driven-development` | "do this TDD" |
+| Build a quick prototype | `mattpocock-skills:prototype` | "prototype this so I can feel it out" |
+| Work with a full product team (PM, architect, dev, QA) | BMAD, starting with `bmad` | "bmad, where do I start?" |
 
-### Keep code honest
+### Keep the code honest
 
 | You want to | Use | Say something like |
 |---|---|---|
-| The smallest code that works | `ponytail` | "/ponytail" or "be lazy" |
-| Short, blunt replies that save tokens | `caveman` | "caveman mode" |
-| Fewer overreaching edits | `andrej-karpathy-skills:karpathy-guidelines` | it applies itself when writing code |
-| Find a bug's real cause | `superpowers:systematic-debugging` | "debug this" |
-| Review for bugs | built-in `/code-review` | "/code-review" |
+| Get the smallest code that works | `ponytail` | "/ponytail" or "be lazy" |
+| Get short, blunt replies that use fewer tokens | `caveman` | "caveman mode" |
+| Stop Claude from editing more than it needs to | `andrej-karpathy-skills:karpathy-guidelines` | nothing, it turns on when Claude writes code |
+| Find the real cause of a bug | `superpowers:systematic-debugging` | "debug this" |
+| Review for bugs | the built-in `/code-review` | "/code-review" |
 | Review for bloat | `/ponytail-review` | "what can we delete?" |
-| Review with several reviewers at once | `bmad-code-review` | "run code review" |
-| Check it actually works before calling it done | `superpowers:verification-before-completion` | runs before Claude claims "done" |
-| Security, performance, accessibility passes | `agent-skills:security-and-hardening`, `performance-optimization`, `accessibility-engineering` | "harden this", "why is this slow" |
+| Get several reviewers on one change | `bmad-code-review` | "run code review" |
+| Make sure it works before Claude says it's done | `superpowers:verification-before-completion` | nothing, it runs before Claude says "done" |
+| Check security, speed or accessibility | `agent-skills:security-and-hardening`, `performance-optimization`, `accessibility-engineering` | "harden this", "why is this slow" |
 
 ### Understand code
 
 | You want to | Use | Say something like |
 |---|---|---|
-| Map an unfamiliar repo | `/understand-anything:understand`, then `understand-chat` | "/understand" |
-| Onboard someone to a repo | `understand-anything:understand-onboard` | "write an onboarding guide" |
-| Know what a PR really changes | `understand-anything:understand-diff` | "what does this diff affect?" |
-| A queryable graph of code, docs, papers | `graphify` | "/graphify ." |
-| An architecture or flow diagram | `archify` | "draw the architecture of this repo" |
+| Map a repo you don't know | `/understand-anything:understand`, then `understand-chat` | "/understand" |
+| Help someone new get started in a repo | `understand-anything:understand-onboard` | "write an onboarding guide" |
+| See what a PR actually changes | `understand-anything:understand-diff` | "what does this diff affect?" |
+| Build a graph of code, docs or papers you can ask questions about | `graphify` | "/graphify ." |
+| Draw an architecture or flow diagram | `archify` | "draw the architecture of this repo" |
 | Take apart a binary, app or firmware | `rea:reverse-engineer-anything` | "reverse engineer this app" |
 
 ### UI and the web
@@ -55,54 +55,54 @@ Name the skill you want. Claude picks skills by their descriptions, and with thi
 | You want to | Use | Say something like |
 |---|---|---|
 | Design, critique or polish any UI | `impeccable` | "/impeccable critique the pricing page", "/impeccable bolder" |
-| A good-looking marketing site | `taste-skill` | "build a landing page for X" |
-| Pick styles, palettes, fonts for app UI | `ui-ux-pro-max` | "suggest a palette and type for a fintech dashboard" |
+| Build a marketing site that looks good | `taste-skill` | "build a landing page for X" |
+| Pick styles, palettes and fonts for an app | `ui-ux-pro-max` | "suggest a palette and type for a fintech dashboard" |
 | Drive a real browser and test a site | Playwright MCP | "open localhost:3000 and test signup" |
-| Read X, Reddit, YouTube subtitles, Bilibili | `agent-reach` | "read this tweet thread" |
+| Read X, Reddit, Bilibili or YouTube subtitles | `agent-reach` | "read this tweet thread" |
 
 ### Writing and video
 
 | You want to | Use | Say something like |
 |---|---|---|
-| Make a draft sound like you, not a chatbot | `no-ai-slop` | "edit this, keep my voice" |
-| Check a draft for AI tells without rewriting | `no-ai-slop` | "does this read as AI?" |
-| Explain something in plain, literal, hard-to-misread English | `ste` | "explain this in STE", "strict STE" |
-| A second pass against Wikipedia's AI-writing list | `humanizer` | "/humanizer" |
+| Make a draft sound like you and not a chatbot | `no-ai-slop` | "edit this, keep my voice" |
+| Check a draft for AI tells without changing it | `no-ai-slop` | "does this read as AI?" |
+| Get an explanation that's plain, literal and hard to misread | `ste` | "explain this in STE", "strict STE" |
+| Check a draft against Wikipedia's list of AI writing signs | `humanizer` | "/humanizer" |
 | Make a video, promo, explainer or captioned clip | `hyperframes` | "make a 30s launch video for X" |
-| A slide deck you can click through | `slideshow` (from hyperframes) | "turn this into a slideshow" |
+| Make a slide deck you can click through | `slideshow`, which comes with hyperframes | "turn this into a slideshow" |
 
-### Runs in the background
+### Runs on its own
 
 | What | What it does |
 |---|---|
-| `i-have-adhd` | Replies lead with the next action and number the steps. `setup.sh` turns it on for every session. |
-| `headroom` | Compresses context to save tokens through a local proxy. Off until you run `headroom init`. |
+| `i-have-adhd` | Makes replies start with the next thing to do and number the steps. `setup.sh` turns it on for every session. |
+| `headroom` | Saves tokens by compressing context through a local proxy. It stays off until you run `headroom init`. |
 
 ## Where the packs overlap
 
-These all do the same jobs. The table above picks one, but here's the full list if you'd rather use another.
+The tables above pick one skill for each job. If you'd rather use a different one, these are all the skills that do the same thing.
 
-- Code review comes from built-in `/code-review`, `superpowers:requesting-code-review`, `mattpocock-skills:code-review`, `agent-skills:code-review-and-quality`, `bmad-code-review`
-- TDD comes from superpowers, `mattpocock-skills:tdd`, `agent-skills:test-driven-development`
-- Debugging comes from superpowers, `mattpocock-skills:diagnosing-bugs`, `agent-skills:debugging-and-error-recovery`
-- Codebase maps come from understand-anything and graphify
-- UI design comes from impeccable, taste-skill and ui-ux-pro-max
-- Writing cleanup comes from no-ai-slop and humanizer
-- Caveman, ponytail and i-have-adhd all push Claude to say less
-- Planning comes from superpowers, Addy's `planning-and-task-breakdown` and BMAD
+- Code review is in the built-in `/code-review`, `superpowers:requesting-code-review`, `mattpocock-skills:code-review`, `agent-skills:code-review-and-quality` and `bmad-code-review`.
+- TDD is in superpowers, `mattpocock-skills:tdd` and `agent-skills:test-driven-development`.
+- Debugging is in superpowers, `mattpocock-skills:diagnosing-bugs` and `agent-skills:debugging-and-error-recovery`.
+- Planning is in superpowers, Addy's `planning-and-task-breakdown` and BMAD.
+- Codebase maps come from both understand-anything and graphify.
+- UI design is in impeccable, taste-skill and ui-ux-pro-max.
+- no-ai-slop and humanizer both clean up writing.
+- caveman, ponytail and i-have-adhd all make Claude say less.
 
-If skill picks start going wrong, disable a pack with `claude plugin disable <name>`.
+If Claude keeps picking the wrong skill, turn a pack off with `claude plugin disable <name>`.
 
-## Read before you install
+## Read this before you install
 
-- Headroom's hook only does something after `headroom init`. Once you run that, all Claude Code API traffic goes through its local proxy.
-- Agent Reach borrows a site's login from your Chrome when a site needs one. Its own docs suggest using a secondary account for those.
+- Headroom's hook does nothing until you run `headroom init`, and after that all your Claude Code API traffic goes through its local proxy.
+- Agent Reach uses your Chrome login when a site needs one, and its docs suggest a second account for those sites.
 - `graphify install` adds a short `# graphify` section to `~/.claude/CLAUDE.md`.
-- archify makes diagram pages unasked for complex answers. Add `[archify explainer: on-demand]` to `~/.claude/CLAUDE.md` to get pages only when you ask.
-- impeccable runs a design check after every file edit and at session start. It's fast, but it's there.
-- no-ai-slop and ste have no upstream repo. They live in this repo and `setup.sh` installs them, so `install-stack.sh` alone skips them.
-- i-have-adhd is on for every session while `~/.claude/.i-have-adhd-always` exists. Delete that file to turn it off.
-- BMAD v7 is an alpha and changes often. `bmad status` shows what you have and `bmad setup` updates it.
+- archify makes diagram pages for complex answers even when you didn't ask, and adding `[archify explainer: on-demand]` to `~/.claude/CLAUDE.md` stops that.
+- impeccable runs a quick design check after every file edit and when a session starts.
+- no-ai-slop and ste live only in this repo, so `setup.sh` installs them and `install-stack.sh` on its own skips them.
+- i-have-adhd stays on in every session while `~/.claude/.i-have-adhd-always` exists, and deleting that file turns it off.
+- BMAD v7 is an alpha that changes often, so run `bmad status` to see what you have and `bmad setup` to update it.
 
 ## Remove something
 
