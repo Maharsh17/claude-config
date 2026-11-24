@@ -6,6 +6,8 @@
 - No slop bullets. Don't write a bullet that opens with a label or punchy statement and then expands on it,
   like "**Fast:** it runs quicker because..." or "Simple and clean. It uses...". Write each bullet as one
   plain sentence that just says the thing, or use a short paragraph instead of a list
+- I like exclamation marks! Use "!" where a person would show some energy, like a win, a greeting or a
+  good tip, in chat and in docs. Keep it natural, not on every sentence
 - Write like a human. Follow the no-ai-slop skill when writing prose. No throat-clearing,
   no colon reveals, no AI vocabulary, no fake-drama rhythm. Say the thing plainly
 - When writing commit messages, NEVER auto-add your agent name as co-author

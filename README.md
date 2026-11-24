@@ -1,6 +1,6 @@
 # claude-config
 
-This is my whole Claude Code setup. It has my global instructions, settings, status line and memory, plus about twenty skill packs and a guide that tells you which one to use for what.
+This is my whole Claude Code setup. It has my global instructions, settings, status line and memory, plus about twenty skill packs and a guide that tells you which one to use for what!
 
 ## Install
 
@@ -13,13 +13,13 @@ bash setup.sh            # skill stack + config
 bash setup.sh --config   # config only, skip the skill stack
 ```
 
-Restart Claude Code when it finishes. `setup.sh` backs up anything it replaces in `~/.claude` to `~/.claude/backup-<timestamp>/`, so you can run it as many times as you like.
+Restart Claude Code when it finishes. `setup.sh` backs up anything it replaces in `~/.claude` to `~/.claude/backup-<timestamp>/`, so you can run it as many times as you like!
 
 ## What's in here
 
 | Path | Goes to | What it is |
 |---|---|---|
-| `claude/CLAUDE.md` | `~/.claude/CLAUDE.md` | The instructions Claude reads in every session. They cover how I like writing (no em dashes, no slop bullets, few colons) and how I like engineering done (reproduce bugs first, fix lint and flaky tests when you see them, ask before spawning lots of subagents) |
+| `claude/CLAUDE.md` | `~/.claude/CLAUDE.md` | The instructions Claude reads in every session. They cover how I like writing (no em dashes, no slop bullets, few colons, exclamation marks welcome) and how I like engineering done (reproduce bugs first, fix lint and flaky tests when you see them, ask before spawning lots of subagents) |
 | `claude/settings.json` | `~/.claude/settings.json` | Opus on high effort, fullscreen TUI, dark theme, voice input, the status line, and every plugin in the stack turned on |
 | `claude/statusline-command.sh` | `~/.claude/statusline-command.sh` | An orange status bar with user@macbook, the folder, git branch, model, context used and the time |
 | `claude/skills/no-ai-slop` | `~/.claude/skills/` | Edits a draft so it sounds like a person wrote it, and keeps your voice |

@@ -1,6 +1,6 @@
 # Which skill to use when
 
-I installed about twenty skill packs and ended up with five code reviewers, four TDD skills and three planners, and Claude was picking between them on its own. This guide picks one skill for each job, so you know what to ask for. One script installs all of them.
+I installed about twenty skill packs and ended up with five code reviewers, four TDD skills and three planners, and Claude was picking between them on its own. This guide picks one skill for each job, so you know what to ask for. One script installs all of them!
 
 ## Install
 
@@ -8,7 +8,7 @@ The [README](README.md) has the full install. If you only want the skills and no
 
 ## Name the skill you want
 
-Claude picks a skill by reading its description, and with this many overlaps it will sometimes pick a different pack's version of the one you meant. If you say "use superpowers brainstorming on this", you get exactly that skill. If you say "help me plan this", you get whichever one Claude likes today.
+Claude picks a skill by reading its description, and with this many overlaps it will sometimes pick a different pack's version of the one you meant. If you say "use superpowers brainstorming on this", you get exactly that skill. If you say "help me plan this", you get whichever one Claude likes today!
 
 ## What to use when
 
@@ -91,7 +91,7 @@ The tables above pick one skill for each job. If you'd rather use a different on
 - no-ai-slop and humanizer both clean up writing.
 - caveman, ponytail and i-have-adhd all make Claude say less.
 
-If Claude keeps picking the wrong skill, turn a pack off with `claude plugin disable <name>`.
+If Claude keeps picking the wrong skill, turn a pack off with `claude plugin disable <name>`. That fixes it most of the time!
 
 ## Read this before you install
 
